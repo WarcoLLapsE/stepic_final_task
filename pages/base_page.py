@@ -16,3 +16,7 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def is_url_present(self):
+        url = self.browser.current_url
+        return 'login' in url
