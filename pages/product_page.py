@@ -3,13 +3,17 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
-    def should_be_product_page(self):
-        self.should_be_product_url()
+    def should_be_product_page(self, value):
+        self.should_be_product_url(value)
         self.should_be_add_to_cart_button()
 
-    def should_be_product_url(self):
+    def should_be_equal_product_price_and_name(self):
+        self.should_be_equal_price()
+        self.should_be_equal_product_name()
+
+    def should_be_product_url(self, value):
         # реализуйте проверку на корректный url адрес
-        assert self.is_url_present('handbook_209/?promo=newYear'), "Url link is not presented"
+        assert self.is_url_present(value), "Url link is not presented"
 
     def should_be_add_to_cart_button(self):
         # реализуйте проверку, что есть форма логина
