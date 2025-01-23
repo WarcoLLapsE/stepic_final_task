@@ -31,4 +31,4 @@ class ProductPage(BasePage):
     def should_be_equal_product_name(self):
         product_page_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         product_alert_name = self.browser.find_element(*ProductPageLocators.PRODUCT_INNER_ALERT_NAME).text
-        assert product_page_name in product_alert_name, "Product names aren't equal"
+        assert product_page_name in product_alert_name, "Product names aren't equal"  # okkok
