@@ -32,3 +32,7 @@ class ProductPage(BasePage):
         product_page_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         product_alert_name = self.browser.find_element(*ProductPageLocators.PRODUCT_INNER_ALERT_NAME).text
         assert product_page_name == product_alert_name, "Product names aren't equal"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"

@@ -16,3 +16,4 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".col-sm-6.product_main>.price_color")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".col-sm-6.product_main>h1")
     PRODUCT_INNER_ALERT_NAME = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert.alert-safe')
