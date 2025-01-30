@@ -11,14 +11,14 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     page.open()
     page.should_be_product_page('coders-at-work_207')
     page.click_add_to_cart_button()
-    page.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE)
+    assert page.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE) is True
 
 
 def test_guest_cant_see_success_message(browser):
     page = ProductPage(browser, link)
     page.open()
     page.should_be_product_page('coders-at-work_207')
-    page.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE)
+    assert page.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE) is True
 
 
 def test_message_disappeared_after_adding_product_to_basket(browser):
@@ -27,4 +27,4 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.should_be_product_page('coders-at-work_207')
     page.click_add_to_cart_button()
     time.sleep(5)
-    page.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)
+    assert page.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE) is True

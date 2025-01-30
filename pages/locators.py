@@ -17,3 +17,8 @@ class ProductPageLocators:
     PRODUCT_NAME = (By.CSS_SELECTOR, ".col-sm-6.product_main>h1")
     PRODUCT_INNER_ALERT_NAME = (By.XPATH, '//*[@id="messages"]/div[1]/div/strong')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert.alert-safe')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
